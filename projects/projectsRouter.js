@@ -40,4 +40,15 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id/resources', (req, res) => {
+    projects.getProjectResources(req.params.id)
+        .then(resources => {
+            res.status(200).json(resources)
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json({message: 'could not get data from database'})
+        })
+})
+
 module.exports = router

@@ -4,8 +4,6 @@ const projectsRouter = require('./projects/projectsRouter')
 const resourcesRouter = require('./resources/resourcesRouter')
 const tasksRouter = require('./tasks/tasksRouter')
 
-const db = require('./db-helpers')
-
 const server = express()
 
 server.use(express.json())
