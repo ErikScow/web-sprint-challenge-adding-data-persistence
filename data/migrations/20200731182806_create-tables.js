@@ -24,6 +24,8 @@ exports.up = function(knex) {
         tbl.text('notes')
         tbl.boolean('status')
             .notNullable()
+        tbl.integer('project_id')
+            .notNullable()
     })
     .createTable('intermediary', tbl => {
         tbl.integer('project_id')
